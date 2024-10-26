@@ -1,0 +1,33 @@
+{
+  "originHash" : "8b533b0adf11527555d869cab64d54d4d796e35bd2f1dfe3747843d0730c6b52",
+  "pins" : [
+    {
+      "identity" : "swift-argument-parser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-argument-parser",
+      "state" : {
+        "revision" : "41982a3656a71c768319979febd796c6fd111d5c",
+        "version" : "1.5.0"
+      }
+    },
+    {
+      "identity" : "swift-collections",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-collections.git",
+      "state" : {
+        "revision" : "671108c96644956dddcd89dd59c203dcdb36cec7",
+        "version" : "1.1.4"
+      }
+    },
+    {
+      "identity" : "swiftsdl",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/KevinVitale/SwiftSDL.git",
+      "state" : {
+        "branch" : "epics/sdl3",
+        "revision" : "21f7e4abdf4e6895dd9c6d4d640089904d1e088f"
+      }
+    }
+  ],
+  "version" : 3
+}
