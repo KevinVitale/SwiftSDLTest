@@ -1,5 +1,5 @@
 {
-  "originHash" : "8b533b0adf11527555d869cab64d54d4d796e35bd2f1dfe3747843d0730c6b52",
+  "originHash" : "dbb22cb8b7db75c4a01b32341a694a1eeac4773a8bf6dd8d35e35e65962e6a87",
   "pins" : [
     {
       "identity" : "swift-argument-parser",
@@ -24,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/KevinVitale/SwiftSDL.git",
       "state" : {
-        "branch" : "epics/sdl3",
-        "revision" : "21f7e4abdf4e6895dd9c6d4d640089904d1e088f"
+        "revision" : "1c4a2e7f3a24cb1c227026a44a995361a389779c",
+        "version" : "0.2.0-alpha.4"
       }
     }
   ],
