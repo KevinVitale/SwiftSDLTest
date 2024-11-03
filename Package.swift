@@ -9,7 +9,7 @@ let package = Package(
       .macOS(.v10_15)
     ],
     dependencies: [
-      .package(url: "https://github.com/KevinVitale/SwiftSDL.git", from: "0.2.0-alpha.8"),
+      .package(url: "https://github.com/KevinVitale/SwiftSDL.git", from: "0.2.0-alpha.9"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
