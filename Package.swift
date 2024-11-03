@@ -6,8 +6,6 @@ import PackageDescription
 let package = Package(
     name: "SwiftSDLTest",
     platforms: [
-      .iOS(.v13),
-      .tvOS(.v13),
       .macOS(.v10_15)
     ],
     dependencies: [
@@ -22,15 +20,7 @@ let package = Package(
               "SwiftSDL"
             ],
             resources: [
-              .process("../Resources/BMP")
-            ],
-            linkerSettings: [
-              .unsafeFlags([
-                "-Xlinker", "-sectcreate",
-                "-Xlinker", "__TEXT",
-                "-Xlinker", "__info_plist",
-                "-Xlinker", "Resources/Info.plist"
-              ], .when(platforms: [.iOS]))
+              .process("../Resources/BMP"),
             ]
         ),
     ]
