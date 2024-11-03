@@ -5,9 +5,13 @@ import PackageDescription
 
 let package = Package(
     name: "SwiftSDLTest",
-    platforms: [.macOS(.v10_15)],
+    platforms: [
+      .iOS(.v13),
+      .tvOS(.v13),
+      .macOS(.v10_15)
+    ],
     dependencies: [
-      .package(url: "https://github.com/KevinVitale/SwiftSDL.git", from: "0.2.0-alpha.7"),
+      .package(url: "https://github.com/KevinVitale/SwiftSDL.git", from: "0.2.0-alpha.8"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -21,11 +25,12 @@ let package = Package(
               .process("../Resources/BMP")
             ],
             linkerSettings: [
-              .unsafeFlags(
-                [
-                "-Xlinker", "-F", "-Xlinker", "/usr/local/lib",
-                "-Xlinker", "-rpath", "-Xlinker", "/usr/local/lib",
-              ], .when(platforms: [.macOS]))
+              .unsafeFlags([
+                "-Xlinker", "-sectcreate",
+                "-Xlinker", "__TEXT",
+                "-Xlinker", "__info_plist",
+                "-Xlinker", "Resources/Info.plist"
+              ])
             ]
         ),
     ]
