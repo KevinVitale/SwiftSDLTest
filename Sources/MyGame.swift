@@ -18,7 +18,7 @@ import SwiftSDL
     )
   }
   
-  func onUpdate(window: any SwiftSDL.Window, _ delta: SwiftSDL.Tick) throws(SwiftSDL.SDL_Error) {
+  func onUpdate(window: any SwiftSDL.Window, _ delta: Uint64) throws(SwiftSDL.SDL_Error) {
     let surface = try window.surface.get()
     try surface.clear(color: .gray)
     
@@ -47,7 +47,7 @@ import SwiftSDL
   }
   
   func onShutdown(window: any SwiftSDL.Window) throws(SwiftSDL.SDL_Error) {
-    iconBMP?.destroy()
+    iconBMP = nil
   }
   
   /// Silences decoding errors for `(any Surface)!`...
