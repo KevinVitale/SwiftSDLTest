@@ -1,7 +1,7 @@
 import SwiftSDL
 
 @main final class MyGame: Game {
-  static var windowFlags: [SDL_WindowCreateFlag] {
+  static var windowProperties: [WindowProperty] {
     [
       .windowTitle("SwiftSDL Test"),
       .width(640), .height(480)
@@ -10,6 +10,8 @@ import SwiftSDL
   
   private var iconBMP: (any Surface)!
   private var position: Point<Int32> = .zero
+  
+  @OptionGroup var options: GameOptions
   
   func onReady(window: any SwiftSDL.Window) throws(SwiftSDL.SDL_Error) {
     self.iconBMP = try SDL_Load(
@@ -46,7 +48,7 @@ import SwiftSDL
     }
   }
   
-  func onShutdown(window: any SwiftSDL.Window) throws(SwiftSDL.SDL_Error) {
+  func onShutdown(window: (any SwiftSDL.Window)?) throws(SwiftSDL.SDL_Error) {
     iconBMP = nil
   }
   
