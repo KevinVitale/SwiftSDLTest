@@ -53,7 +53,9 @@ import SwiftSDL
   }
   
   /// Silences decoding errors for `(any Surface)!`...
-  enum CodingKeys: CodingKey { /* no-op */ }
+  enum CodingKeys: CodingKey {
+    case options
+  }
   
   required init() {
     #if os(iOS)
