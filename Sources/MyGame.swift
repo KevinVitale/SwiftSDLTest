@@ -20,7 +20,7 @@ import SwiftSDL
     )
   }
   
-  func onUpdate(window: any SwiftSDL.Window, _ delta: Uint64) throws(SwiftSDL.SDL_Error) {
+  func onUpdate(window: any SwiftSDL.Window) throws(SwiftSDL.SDL_Error) {
     let surface = try window.surface.get()
     try surface.clear(color: .gray)
     
